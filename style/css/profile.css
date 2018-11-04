@@ -1,0 +1,78 @@
+
+
+.basic-info {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.basic-info-text {
+}
+
+
+
+#profile-img {
+	border-radius: 50%;
+	position: relative;
+	height: 150px;
+	width: 150px;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	margin-bottom: 10px;
+}
+
+#profile-img:hover #img{
+	opacity: 0.4;
+}
+
+#profile-img:hover #img-button{
+	display: block;
+}
+
+#img {
+	height: inherit;
+	width:inherit;
+	border-radius: inherit;
+	transition: .5s ease;
+    opacity:1;
+}
+
+
+
+
+#linkedin-info {
+	text-decoration: none;
+	text-align: center!important;
+	margin-top:10px;
+}
+
+#linkedin-info i {
+	float: none!important;
+}
+
+.cv-button {
+	left: 50%;
+    transform: translate(-50%);
+    position: relative;
+    
+    background-color:  #F08E39;
+}
+
+.cv-button a {
+	text-decoration: none;
+	color:black;
+}
+
+.orange {
+	color: #F08E39;
+}
+
+.left {
+	text-align: left;
+}
+
+.horizontal-line {
+	border-left: 1px solid black
+}
+
+#hidden-content {
+	display: none;
+}

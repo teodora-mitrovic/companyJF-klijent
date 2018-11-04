@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: gainsboro; }
+  body li {
+    list-style: none; }
+  body a, body a:hover, body a:visited {
+    text-decoration: none; }
+  body .row {
+    margin-left: 0;
+    margin-right: 0; }
+  body article {
+    padding-top: 40px;
+    padding-bottom: 40px; }
+  body .container-fluid {
+    padding-left: 0;
+    padding-right: 0; }
+
+#search section div .card .card-body .select-university input, .select-faculty input, #search section div .card .card-body .selected-parameters input {
+  border: none;
+  user-select: none;
+  outline: none;
+  white-space: normal; }
+
+#accordion .card {
+  margin-bottom: 20px;
+}
+
+header {
+  text-align: center;
+  padding-top: 40px;
+  background: #fff; }
+  header .navbar {
+    flex-direction: unset;
+    padding: 0;
+    width: 100%; }
+  header nav .navbar-toggler {
+    margin: 10px 15px; }
+    @media screen and (min-width: 768px) {
+      header nav .navbar-toggler {
+        display: none; } }
+  header nav .collapse {
+    text-align: center;
+    display: block; }
+    header nav .collapse ul {
+      flex-direction: row;
+      display: unset;
+      padding: 0; }
+      header nav .collapse ul li {
+        display: inline-block;
+        margin: 0 15px; }
+        @media screen and (max-width: 768px) {
+          header nav .collapse ul li {
+            margin: 0 10px; } }
+        @media screen and (max-width: 576px) {
+          header nav .collapse ul li {
+            display: block; } }
+  header .navbar-dark {
+    background-color: #5a5a5a; }
+    header .navbar-dark .navbar-nav .nav-link {
+      color: #fff;
+      background: rgba(199, 199, 199, 0.3);
+      padding: 10px 50px;
+      font-weight: 600; }
+      @media screen and (max-width: 992px) {
+        header .navbar-dark .navbar-nav .nav-link {
+          padding: 10px 20px; } }
+      @media screen and (max-width: 768px) {
+        header .navbar-dark .navbar-nav .nav-link {
+          padding: 10px; } }
+      @media screen and (max-width: 576px) {
+        header .navbar-dark .navbar-nav .nav-link {
+          margin-bottom: 10px; } }
+      header .navbar-dark .navbar-nav .nav-link:hover, header .navbar-dark .navbar-nav .nav-link:active, header .navbar-dark .navbar-nav .nav-link:focus {
+        color: #fff; }
+
+@media screen and (min-width: 768px) {
+  #search section {
+    padding: 30px; } }
+#search section div .card {
+  margin-bottom: 30px; }
+  #search section div .card a {
+    width: 100%;
+    text-align: left;
+    padding: 0 5%; }
+    #search section div .card a i:nth-last-child(1) {
+      float: right;
+      overflow: hidden; }
+  #search section div .card .card-body {
+    background: #5a5a5a; }
+    #search section div .card .card-body h4 {
+      margin-top: 30px;
+      padding-bottom: 15px;
+      color: #fff; }
+    #search section div .card .card-body h5 {
+      margin-top: 30px;
+      padding-bottom: 15px;
+      color: #fff; }
+    #search section div .card .card-body label {
+      color: #fff;
+      padding-right: 15px; }
+      #search section div .card .card-body label input {
+        margin-right: 5px;
+        line-height: 2; }
+    #search section div .card .card-body input[name="MAS"], #search section div .card .card-body input[name="SUM"] {
+      word-spacing: 30px; }
+    @media screen and (max-width: 576px) {
+      #search section div .card .card-body input[name="full-name"] {
+        width: 100%; } }
+    #search section div .card .card-body .select-university, .select-faculty {
+      margin: 20px 0; }
+      #search section div .card .card-body .select-university input, .select-faculty input {
+        width: 26%;
+        border-radius: 10px;
+        padding: 5px;
+        background-color: #F46D1E;
+        margin: 3%;
+        text-align: center;
+        font-size: 90%;
+        color: #fff;
+        text-transform: uppercase; }
+        #search section div .card .card-body .select-univeristy input:hover {
+          opacity: 0.8;
+          transition: 0.6s; }
+        @media screen and (max-width: 576px) {
+          #search section div .card .card-body .select-university input, .select-faculty input {
+            width: 94%; } }
+    #search section div .card .card-body .selected-parameters {
+      padding-left: 3%; }
+      @media screen and (max-width: 768px) {
+        #search section div .card .card-body .selected-parameters {
+          padding: 0; } }
+      #search section div .card .card-body .selected-parameters h4 {
+        color: white; }
+      #search section div .card .card-body .selected-parameters input {
+        background: #fff;
+        padding: 10px 0px;
+        margin: 0.6%;
+        width: 7%; }
+        @media screen and (max-width: 992px) {
+          #search section div .card .card-body .selected-parameters input {
+            width: 14.6%;
+            margin: 1%; } }
+        @media screen and (max-width: 576px) {
+          #search section div .card .card-body .selected-parameters input {
+            width: 23%; } }
+    #search section div .card .card-body aside {
+      margin-top: 40px;
+      border-radius: 10px;
+      padding-top: 20px;
+      background: #fff;
+      height: 300px;
+      overflow: auto;
+      margin-bottom: 20px; }
+      #search section div .card .card-body aside label {
+        width: 90%;
+        color: #000;
+        padding-left: 5px; }
+      #search section div .card .card-body aside input {
+        width: 10%;
+        line-height: 2; }
+
+/*# sourceMappingURL=index.css.map */
