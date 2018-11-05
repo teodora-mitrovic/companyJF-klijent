@@ -59,7 +59,7 @@ $(document).ready(function(){
 				  		$('#info-companies').show(0);
 				  		break;
 				  	case 500:
-				  		$('#info-companies').text("Greška na serveru, molimo pokušajte ponovo");
+				  		$('#info-companies').text("Došlo je do greške, molimo pokušajte ponovo");
 				  		$('#info-companies').show(0);
 				  		
 				  		break;
