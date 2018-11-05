@@ -54,12 +54,11 @@ $(document).ready(function(){
 				  		form.reset();
 				  		$('#info-login').text("Netačni kredencijali");
 				  		$('#info-login').show(0);
-			  			alert('Neodgovarajući kredencijali!');
-
 				  		break;
 				  	case 500:
 				  		form.reset();
-				  		alert('Greska na serveru, molimo pokušajte ponovo');
+				  		$('#info-login').text("Došlo je do greške, molimo vas pokušajte ponovo");
+				  		$('#info-login').show(0);
 				  		break;
 
 			  	}
