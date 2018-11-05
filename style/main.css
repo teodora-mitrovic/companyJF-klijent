@@ -1,6 +1,9 @@
-body, .row {
+body, .row, ul, li {
     margin: 0;
     padding: 0;
+  }
+  body {
+    background: gainsboro;
   }
   body li {
     list-style: none;
@@ -15,12 +18,15 @@ body, .row {
   header {
       background-color: #fff;
       font-weight: 600;
+      font-size: 120%;
+      padding: 15px 0;
   }
   header .title {
       padding-top: 25px;
+      color: #999;
   }
 
-  #content {
+  #search {
     background: gainsboro;
   }
 

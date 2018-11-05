@@ -29,14 +29,6 @@ body {
 	z-index: 130;
 }
 
-#login_form:hover {
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
-}
-
 #login_form #info-login {
 	text-align: center;
 	color: red;
