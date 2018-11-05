@@ -51,7 +51,7 @@ function studentProfile(student, number) {
             'data-target' : "#collapse"+number,
             'aria-expanded' : "true", 
             'aria-controls' : "collapse"+number,
-            html : '<i class="fas fa-bars"></i> ' +' ' +student.name+' '+student.surname+'<i class="fas fa-building"></i>'
+            html : '<i class="fas fa-bars"></i> ' +' ' +student.name+' '+student.surname+'<i class="fas fa-graduation-cap"></i>'
         }).appendTo(el);
 
         $('<div/>',{
