@@ -27,7 +27,7 @@ $(document).ready(function(){
 			  	sessionStorage.removeItem('token');
 			  	sessionStorage.removeItem('email');
 
-	  			window.location.href = "index.html";
+	  			window.location.href = "../index.html";
 			  		
 			  },
 			  
@@ -35,7 +35,7 @@ $(document).ready(function(){
 			  
 			  		
 			  		alert("Greska!");
-			  		window.location.href="login.html";
+			  		window.location.href="../index.html";
 	
 			  }
 
