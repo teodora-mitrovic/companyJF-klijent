@@ -1,5 +1,24 @@
-#header {
-    background-color: #fff;
-    color: black;
-    padding: 20px 0;
-}
+body {
+    margin: 0;
+    padding: 0;
+  }
+  body li {
+    list-style: none;
+  }
+  a, a:hover, a:visited {
+    text-decoration: none;
+  }
+
+  /* HEADER */
+  
+  header {
+      background-color: #fff;
+      font-weight: 600;
+  }
+  header .title {
+      padding-top: 25px;
+  }
+
+  #content {
+    background: gainsboro;
+  }
