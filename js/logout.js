@@ -27,7 +27,7 @@ $(document).ready(function(){
 			  	sessionStorage.removeItem('token');
 			  	sessionStorage.removeItem('email');
 
-	  			window.location.href = "login.html";
+	  			window.location.href = "index.html";
 			  		
 			  },
 			  
