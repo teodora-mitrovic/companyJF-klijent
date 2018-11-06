@@ -1,3 +1,5 @@
+  /* NORMALIZE */
+
 body, .row, ul, li {
     margin: 0;
     padding: 0;
@@ -10,6 +12,13 @@ body, .row, ul, li {
   }
   a, a:hover, a:visited {
     text-decoration: none;
+  }
+
+  .select-university input, .select-faculty input, .selected-parameters input {
+    border: none;
+    user-select: none;
+    outline: none;
+    white-space: normal;
   }
 
 
@@ -30,7 +39,7 @@ body, .row, ul, li {
     background: gainsboro;
   }
 
-  /* Menu */
+  /* MENU */
 
   #menu {
     background-color: #5a5a5a;
@@ -39,15 +48,117 @@ body, .row, ul, li {
     padding-top: 0;
     padding-bottom: 0;
   }
+  #menu .navbar-nav .nav-item {
+    padding: 0;
+    text-align: center;
+  }
   #menu .navbar-nav .nav-link {
     color: #fff;
     background: rgba(199, 199, 199, 0.3);
-    padding: 15px 50px;
+    padding: 15px 10px;
     font-weight: 600;
     margin-right: 15px;
   }
+  #menu .navbar-nav #logout .nav-link {
+    margin-right: 0;
+  }
 
   #menu .navbar-nav .nav-link:hover {
+    background-color : #F08E39;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+
+  /* SEARCH */
+
+  #search {
+    margin-top: 50px;
+  }
+
+  .card {
+    margin-bottom: 30px;
+  }
+  .card .card-header a {
+    text-align: left;
+    width: 100%;
+  }
+
+  .card .card-body {
+    background: #5a5a5a;
+    padding: 30px;
+    padding-bottom: 30px;
+  }
+
+  .card .card-body h5, 
+  .card .card-body h5 {
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: 15px;
+  }
+ 
+  .card .card-body label {
+    color: #fff;
+  }
+
+  .card .card-body input, 
+  .card .card-body input {
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #F46D1E;
+    text-align: left;
+    font-size: 90%;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .card .card-body input:hover, 
+  .card .card-body input:hover {
+    background-color : #999;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+ 
+
+
+
+
+ 
+  
+  .card .card-body aside {
+    margin-top: 40px;
+    border-radius: 10px;
+    padding-top: 20px;
+    background: #fff;
+    height: 300px;
+    overflow: auto;
+    margin-bottom: 20px;
+  }
+  .card .card-body aside label {
+    width: 90%;
+    color: #000;
+    padding-left: 5px;
+  }
+  .card .card-body aside input {
+    width: 10%;
+    line-height: 2;
+  }
+
+
+
+  .search-btn-main button {
+    color: #fff;
+    padding: 10px 40px;
+    background-color: #5a5a5a;
+  }
+
+  .search-btn-main button:hover {
     background-color : #F08E39;
       -webkit-transition: all 1s ease;
       -moz-transition: all 1s ease;

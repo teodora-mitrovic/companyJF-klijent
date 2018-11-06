@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Analytics | CV Browser</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../style/bootstrap.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<body>
+
+
+<div id="studije"></div>
+<div id="prosek"></div>
+
+
+
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(studije);
+    google.charts.setOnLoadCallback(prosek);
+
+    function studije() {
+        var data = google.visualization.arrayToDataTable([
+        ['Studije', 'stepen'],
+        ['Osnovne', 8],
+        ['Master', 8],
+        ['Doktorske', 2]
+        ]);
+
+        var options = {'title':'Stepen Studija', 'width':550, 'height':400};
+
+        var chart = new google.visualization.PieChart(document.getElementById('studije'));
+        chart.draw(data, options);
+    }
+
+    function prosek() {
+        var data = google.visualization.arrayToDataTable([
+        ['Prosek', 'Ocena'],
+        ['6.00 - 7.00', 8],
+        ['7.00 - 8.00', 8],
+        ['8.00 - 9.00', 2],
+        ['9.00 - 10.00', 2]
+        ]);
+
+        var prosek = {'title':'Prosecna ocena', 'width':550, 'height':400};
+
+        var chart = new google.visualization.PieChart(document.getElementById('prosek'));
+        chart.draw(data, prosek);
+    }
+</script>
+
+</body>
+</html>
