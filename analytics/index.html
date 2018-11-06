@@ -34,18 +34,20 @@
     }
 
     function prosek() {
-        var data = google.visualization.arrayToDataTable([
+        var moreData = google.visualization.arrayToDataTable([
         ['Prosek', 'Ocena'],
-        ['6.00 - 7.00', 8],
-        ['7.00 - 8.00', 8],
-        ['8.00 - 9.00', 2],
-        ['9.00 - 10.00', 2]
+        ['6.00 - 6.50', 8],
+        ['6.50 - 7.00', 8],
+        ['7.00 - 7.50', 8],
+        ['7.50 - 8.00', 8],
+        ['8.50 - 9.00', 2],
+        ['9.50 - 10.00', 2]
         ]);
 
         var prosek = {'title':'Prosecna ocena', 'width':550, 'height':400};
 
         var chart = new google.visualization.PieChart(document.getElementById('prosek'));
-        chart.draw(data, prosek);
+        chart.draw(moreData, prosek);
     }
 </script>
 
