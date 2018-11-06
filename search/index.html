@@ -36,19 +36,19 @@
                         <ul class="navbar-nav row" style="width: 100%">
                             
                             <li class="nav-item col-2">
-                                <a class="nav-link" href="#"><i class="far fa-compass"></i> Početna</a>
+                                <a class="nav-link" href="../home/"><i class="far fa-compass"></i> Početna</a>
                             </li>
                             <li class="nav-item company col-2">
-                                <a class="nav-link" href="#"><i class="fas fa-search"></i> Pretraga </a>
+                                <a class="nav-link" href="../search/"><i class="fas fa-search"></i> Pretraga </a>
                             </li>
                             <li class="nav-item company col-2">
-                                    <a class="nav-link" href="#"><i class="fas fa-user"></i> Analitika</a>
+                                    <a class="nav-link" href="../analytics/"><i class="fas fa-user"></i> Analitika</a>
                             </li>
                             <li class="nav-item company col-2">
-                                    <a class="nav-link" href="#"><i class="fas fa-user"></i> Profil</a>
+                                    <a class="nav-link" href="../profile/"><i class="fas fa-user"></i> Profil</a>
                             </li>
                             <li class="nav-item company col-2">
-                                    <a class="nav-link" href="#"><i class="fas fa-user"></i> Kontakt</a>
+                                    <a class="nav-link" href="../contact/"><i class="fas fa-user"></i> Kontakt</a>
                             </li>
                             <li class="nav-item admin col-2">
                                 <a class="nav-link" href="#"><i class="fas fa-user"></i> Admin panel</a>
@@ -211,26 +211,45 @@
                             </div>
         
                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                <div class="card-body row">
-                                    <div class="col-12 col-md-6">
-                                        <h5>
+                                <div class="card-body container">
+                                    <div class="row">
+                                        <h5 class="col-12">
                                             Prosecna ocena
                                         </h5>
-                                        <label><input type="checkbox" class="grade" name="6.00 - 6.50">6.0 - 6.5</label>
-                                        <label><input type="checkbox" class="grade" name="8.00 - 8.50">8.0 - 8.5</label><br>
-                                        <label><input type="checkbox" class="grade" name="6.50 - 7.00">6.5 - 7.0</label>
-                                        <label><input type="checkbox" class="grade" name="8.50 - 9.00">8.5 - 9.0</label><br>
-                                        <label><input type="checkbox" class="grade" name="7.00 - 7.50">7.0 - 7.5 </label>
-                                        <label><input type="checkbox" class="grade" name="9.00 - 9.50">9.0 - 9.5 </label><br>     
-                                        <label><input type="checkbox" class="grade" name="7.50 - 8.00">7.5 - 8.0</label>
-                                        <label><input type="checkbox" class="grade" name="9.50 - 10.00">9.5 - 10.0 </label><br>
-                                        <h5>
+                                        <label class="col-3">
+                                            <input type="checkbox" class="grade" name="6.00 - 6.50">6.00 - 6.50
+                                        </label>
+                                        <label class="col-3">
+                                            <input type="checkbox" class="grade" name="6.00 - 6.50">6.50 - 7.00
+                                        </label>
+                                        <label class="col-3">
+                                            <input type="checkbox" class="grade" name="7.00 - 7.50">7.00 - 7.50
+                                        </label>
+                                        <label class="col-3">
+                                            <input type="checkbox" class="grade" name="7.50 - 8.00">7.50 - 8.00
+                                        </label>
+                                        <label class="col-3">
+                                            <input type="checkbox" class="grade" name="8.00 - 8.50">8.00 - 8.50
+                                        </label>
+                                        <label class="col-3">
+                                            <input type="checkbox" class="grade" name="8.50 - 9.00">8.50 - 9.00
+                                        </label>
+                                        <label class="col-3">
+                                            <input type="checkbox" class="grade" name="9.00 - 9.50">9.00 - 9.50
+                                        </label>
+                                        <label class="col-3">
+                                            <input type="checkbox" class="grade" name="9.50 - 10.00">9.50 - 10.00
+                                        </label>
+                                        <h5 class="col-12">
                                             Vozacka dozvola
                                         </h5>
-                                        <label><input type="checkbox" name="da" value="Da" class="licence">Da</label>
-                                        <label><input type="checkbox" name="ne" value="Ne" class="licence">Ne</label>
-                                    </div>
-                                    <div class="col-12 col-md-6">
+                                        <label class="col-3">
+                                            <input type="checkbox" name="da" value="Da" class="licence">Da
+                                        </label>
+                                        <label class="col-3">
+                                            <input type="checkbox" name="ne" value="Ne" class="licence">Ne
+                                        </label>
+                                    
                                             <!--
                                             <h4>
                                                 Strani jezik
@@ -248,14 +267,16 @@
                                             
                                             <label><input type="checkbox" class="sex" name="Muški">Muski</label>
                                             <label><input type="checkbox" class="sex" name="Ženski">Zenski</label> -->
-                                    </div>
                                     
-                                    <div class="col-12 col-md-6">
-                                        <h5>
-                                            Dodati CV
+                                        <h5 class="col-12">
+                                            Dodat CV
                                         </h5>
-                                        <label><input type="checkbox" class="cv" value="1">Da</label>
-                                        <label><input type="checkbox" class="cv" value="0" >Ne</label>
+                                        <label class="col-3">
+                                            <input type="checkbox" class="cv" value="1">Da
+                                        </label>
+                                        <label class="col-3">
+                                            <input type="checkbox" class="cv" value="0">Ne
+                                        </label>
                                     </div>
                                 </div>
                             </div>
@@ -268,7 +289,6 @@
                     </div>
                 </section>
             </article>
-            <article id="admin_panel" class="admin"></article>
         </main>
 
 
@@ -276,10 +296,7 @@
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../js/data.js"></script>
 	<script type="text/javascript" src="../js/struka.js"></script>
-	<script type="text/javascript" src="../js/saveCompany.js"></script>
 	<script type="text/javascript" src="../js/searchStudents.js"></script>
-	<script type="text/javascript" src="../js/getAllCompanies.js"></script>
-	<script type="text/javascript" src="../js/changePassword.js"></script>
 	<script type="text/javascript" src="../js/loadView.js"></script>
 	<script type="text/javascript" src="../js/logout.js"></script>
 </body>
