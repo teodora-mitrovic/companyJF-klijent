@@ -1,4 +1,20 @@
 
+function noCriteriaSelected(jsonData) {
+    cv = jsonData['cv'].length;
+    licence = jsonData ['licence'].length;
+    faculties = jsonData['faculties'].length;
+    studies = jsonData['studies'].length;
+    grades = jsonData['grades'].length;
+    sex = jsonData['sex'].length;
+
+    if(cv == 0 && licence == 0 && faculties == 0 && studies == 0 && grades == 0 && sex == 0){
+        return true;
+    }
+    return false;
+}
+
+
+
 
 function linkedinProfile (linkedin) {
     if(linkedin!=null){
@@ -61,8 +77,7 @@ function studentProfile(student, number) {
             'data-parent': "#accordion"
         }).appendTo('#accordion #card'+number);
 
-      
-
+        
         var div = document.createElement('div');
         div.setAttribute('class', 'card-body row student');
         div.setAttribute('id', 'student_'+number);
@@ -81,7 +96,7 @@ function studentProfile(student, number) {
                                 Osnovne Informacije
                             </h4>
                             <h6 class="basic-info-text">Ime i Prezime | <span id="nameSurname">${student.name} ${student.surname}</span></h6>
-                            <h6 class="basic-info-text">Email Adresa | <span id="email-info">${student.email}</span></h6>
+                            <h6 class="basic-info-text">Email Adresa | <span id="email-info">${student.login.email}</span></h6>
                             <h6 class="basic-info-text">Datum Rođenja | <span id="date-info">${student.birth_date}</span></h6>
                             <h6 class="basic-info-text">Pol | <span id="sex-info">${student.sex}</span></h6>
                             <h4 style="color:#F08E39; margin:20px 0">
@@ -126,10 +141,10 @@ $(function(){
     $('#search-btn').bind('click', function(){
 
 
-        const URL = "https://cv.brain.rs/api/student/search";
         var token = sessionStorage.getItem('token');
         jsonData = {};
         var faculties = [];
+        var universities = [];
         var languages = [];
         var degreeOfStudies = [];
         var grades = [];
@@ -139,6 +154,13 @@ $(function(){
 
 
         //faculties
+
+        $('.selectedUniversity').each(function(){
+
+            var university = $(this).attr('value');
+            universities.push("nofaculty_"+university);
+        })
+
         $('.selectedFaculty').each(function(){
             var faculty = $(this).attr('value');
             var university = $(this).attr('id').split('_')[0];
@@ -213,15 +235,31 @@ $(function(){
             }
         })
 
+        if(faculties.length==0){
+            jsonData['faculties'] = universities;
+        }
+        else {
+            jsonData['faculties']=faculties;
+
+        }
         //licence
         jsonData['cv']=cv;
         jsonData['licence']=licence;
-        jsonData['faculties']=faculties;
         //jsonData['languages']=languages;
         
         jsonData['studies']=degreeOfStudies;
         jsonData['grades']=grades;
         jsonData['sex']=sex;
+
+        var URL="";
+        if(noCriteriaSelected(jsonData)) {
+
+            URL = "https://cv.brain.rs/api/student/getAll";
+        }
+        else {
+
+            URL = "https://cv.brain.rs/api/student/search";
+        }
 
         console.log(jsonData);
 

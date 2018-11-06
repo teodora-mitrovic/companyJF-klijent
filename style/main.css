@@ -21,6 +21,12 @@ body, .row, ul, li {
     white-space: normal;
   }
 
+  .selectedUniversity, .selectedFaculty {
+    background-color: #999!important;
+  }
+
+
+
 
   /* HEADER */
   
