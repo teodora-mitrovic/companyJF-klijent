@@ -6,8 +6,8 @@ function noCriteriaSelected(jsonData) {
     studies = jsonData['studies'].length;
     grades = jsonData['grades'].length;
     sex = jsonData['sex'].length;
-
-    if(cv == 0 && licence == 0 && faculties == 0 && studies == 0 && grades == 0 && sex == 0){
+    lang = jsonData['languages'].length;
+    if(cv == 0 && licence == 0 && faculties == 0 && studies == 0 && grades == 0 && sex == 0 && lang == 0){
         return true;
     }
     return false;
@@ -48,6 +48,7 @@ function studentProfile(student, number) {
 
         var year=yearOfStudies(student.year_of_studies);
         var linkedin=linkedinProfile(student.linkedin);
+        
 
         $('<div/>',{
             class: 'card',
@@ -168,13 +169,13 @@ $(function(){
         })
         
         //languages
-        /*
+        
         $('.languages').each(function(){
             if($(this).prop('checked')) {
                 var name = $(this).attr('name');
                 languages.push(name);
             }
-        }) */
+        }) 
 
         // grade
         $('.grade').each(function(){
@@ -245,7 +246,7 @@ $(function(){
         //licence
         jsonData['cv']=cv;
         jsonData['licence']=licence;
-        //jsonData['languages']=languages;
+        jsonData['languages']=languages;
         
         jsonData['studies']=degreeOfStudies;
         jsonData['grades']=grades;
