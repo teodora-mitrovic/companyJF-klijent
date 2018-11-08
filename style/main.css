@@ -157,7 +157,6 @@ body, .row, ul, li {
   }
 
 
-
   .search-btn-main button {
     color: #fff;
     padding: 10px 40px;
@@ -171,4 +170,24 @@ body, .row, ul, li {
       -o-transition: all 1s ease;
       -ms-transition: all 1s ease;
       transition: all 1s ease;
+  }
+
+
+  /* SEARCH */
+  #contact {
+    margin-top: 50px;
+  }
+  #contact .card-body {
+    color: #fff;
+  }
+  #contact .card-body a {
+    color: #fff;
+  }
+  #contact .card-body a:hover {
+    color : #F08E39;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
   }
