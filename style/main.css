@@ -181,10 +181,10 @@ body, .row, ul, li {
     color: #fff;
   }
   #contact .card-body a {
-    color: #fff;
+    color : #F08E39;
   }
   #contact .card-body a:hover {
-    color : #F08E39;
+    color: #fff;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
