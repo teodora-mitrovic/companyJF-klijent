@@ -172,8 +172,13 @@ body, .row, ul, li {
       transition: all 1s ease;
   }
 
+  /* ANALYTICS */
+  rect {
+    fill: gainsboro; !important!;
+  }
 
-  /* SEARCH */
+
+  /* CONTACT */
   #contact {
     margin-top: 50px;
   }
