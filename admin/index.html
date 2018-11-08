@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CV Browser</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+	<link rel="stylesheet" type="text/css" href="../style/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../style/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../style/main.css">
+    <link rel="stylesheet" type="text/css" href="../style/query.css">
+</head>
+<body>
+        <header class="container-fluid">
+            <section class="container">
+                <ul class="row">
+                    <li class="col-4 col-sm-4 col-md-3 col-lg-2">
+                        <img class="img-fluid" src="../assets/logo.png" title="JobFair - Kreiraj Svoju Budućnost" alt="JobFair - Kreiraj Svoju Budućnost">
+                    </li>
+                 </ul>
+            </section>
+        </header>
+    <article id="menu" class="container-fluid">
+            <div class="container">
+                <nav class="navbar navbar-expand-sm">
+                    <button class="navbar-toggler btn btn-primary" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="far fa-compass"></i> Menu
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <ul class="navbar-nav row" style="width: 100%">
+                            
+                                    <li class="nav-item col-3">
+                                        <a class="nav-link" href="../admin/"><i class="far fa-compass"></i> Početna</a>
+                                    </li>
+                                    
+                                    <li class="nav-item col-3">
+                                        <a class="nav-link" href="#"><i class="fas fa-user"></i> Administracija Korisnika</a>
+                                    </li>
+                                    <li class="nav-item col-3" >
+                                        <a class="nav-link" href="#" data-toggle="modal" data-target="#registerModal" ><i class="fas fa-building"></i> Administracija Kompanija</a>
+                                    </li>
+                                    <li class="nav-item col-3" id="logout">
+                                        <a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i>Odjavi se</a>
+                                    </li>
+                                </ul>
+                    </div>
+                </nav>
+            </div>
+        </article>
+
+        <main id="home" class="container">
+                <article class="row">
+                    <section class="col-12">
+                     <!-- Profile -->
+                     <div class="card">
+                         <div class="card-header" id="headingTwo">
+                             <a class="btn" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                 <ul class="row">
+                                     <li class="col-12">
+                                         <i class="fas fa-bars"></i> Administracija
+                                     </li>                                         
+                                 </ul>
+                             </a>
+                         </div>
+                         <div id="collapseTwo" class=" collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+                             <div class="card-body container">
+                                 <p class="col-12">
+                                    Zdravo!
+                                 </p>
+                             </div>
+                         </div>
+                     </div>
+                </section>
+                </article>
+             </main>
+
+             <article id="clear" class="container-fluid"></article>
+
+    <footer class="container-fluid">
+        <article class="container">
+            <section class="row">
+                <ul class="col-9 menu">
+                    <li>
+                        <a href="" title="Početna">
+                            Početna
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="Pretraga">
+                            Pretraga
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="Analitika">
+                            Analitika
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="Profil">
+                            Profil
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="Kontakt">
+                            Kontakt
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="Odjavi se">
+                            Odjavi se
+                        </a>
+                    </li>
+                    <div class="clearFix"></div>
+                    <li class="copyright">
+                        Copyright 2018 © <a href="" title="LazyBrain | Digital Intelligence">LazyBrain | Digital Intelligence</a> - Sva Prava Zadržana
+                    </li>
+                </ul>
+                <div id="social" class="col-3">
+                    <ul>
+                        <h4>
+                            Pratite nas <br>
+                        </h4>
+                        <li>
+                            <a href="" title="Kontaktirajte nas">
+                                <i class="fas fa-envelope-square"></i>
+                            </a>
+                        </li>    
+                        <li>
+                            <a href="" title="Facebook">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="" title="Twitter">
+                                <i class="fab fa-twitter-square"></i>
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="" title="Linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="" title="Yoututube">
+                                <i class="fab fa-youtube-square"></i>
+                            </a>
+                        </li>         
+                    </ul>
+                </div>
+            </section>
+        </article>
+    </footer>
+
+
+    <!-- Register modal -->
+
+	<div class="modal fade" role="dialog" id="registerModal">
+            <div class="modal-dialog">
+                <form id="register_form" method="post">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Registracija kompanije</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="container" >
+                            <div class="row align-items-center">
+                                <div class="form-group col-8">
+                                    <label>Naziv kompanije *</label>
+                                    <input type="text" name="name" id="name"  required="required" class="form-control">
+                                </div>
+    
+                                <div class="form-group col-8 ">
+                                    <label>Email *</label>
+                                    <input type="email" name="email" id="email"  required="required" class="form-control">
+                                </div>
+                                <div class="form-group col-8">
+                                    <label>Lozinka *</label>
+                                    <input type="password" name="pass" id="pass"  required="required" class="form-control">
+                                </div>
+    
+                            </div>
+                        </div>
+                        <div class="modal-footer" >
+                            <button type="submit" class="btn button-orange" form="register_form">Sačuvaj</button>
+                            <button type="button" class="btn button-orange" data-dismiss="modal">Zatvori</button>
+                        </div>
+    
+                    </div>
+    
+                </form>
+            </div>
+    
+        </div>
+    
+    
+        <!-- Change password modal -->
+    
+        <div class="modal fade" role="dialog" id="passwordModal">
+            <div class="modal-dialog">
+                <form id="change_password_form" method="post">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Promena lozinke kompanije</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="container" >
+                            <div class="row align-items-center">
+                                <div class="col-8" style="padding: 2%; margin-left: 1.3%;"> 	
+                                      <div class="form-group" >
+                                          <label>Izaberite kompaniju *</label>
+                                          <select class="custom-select" id="companies">
+                                          </select>
+                                    
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Nova lozinka</label>
+                                        <input type="password" id="new_password"  required="required" class="form-control">
+                                      </div>
+                                      <div class="form-group">
+                                        <label>Potvrdi novu lozinku</label>
+                                        <input type="password" id="confirmed_password"  required="required" class="form-control">
+                                      </div>
+                                </div>   
+                            </div>
+                        </div>
+    
+                        <div class="modal-footer" >
+                            <button type="submit" class="btn button-orange" form="change_password_form">Sačuvaj</button>
+                            <button type="button" class="btn button-orange" data-dismiss="modal">Zatvori</button>
+                        </div>
+    
+                    </div>
+    
+                </form>
+            </div>
+    
+        </div>
+
+
+	<script type="text/javascript" src="../js/data.js"></script>
+	<script type="text/javascript" src="../js/saveCompany.js"></script>
+	<script type="text/javascript" src="../js/getAllCompanies.js"></script>
+	<script type="text/javascript" src="../js/changePassword.js"></script>
+	<script type="text/javascript" src="../js/loadView.js"></script>
+    <script type="text/javascript" src="../js/logout.js"></script>
+    <script type="text/javascript" src="../js/authorization.js"></script>
+
+</body>
+</html>

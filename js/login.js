@@ -40,7 +40,7 @@ $(document).ready(function(){
 				  	sessionStorage.setItem('token', resp.data.token);
 				  	sessionStorage.setItem('user_type', resp.data.user_type);
 
-		  			window.location.href = "home/";
+		  			window.location.href = "company/home/";
 			  	
 	
 			  },
