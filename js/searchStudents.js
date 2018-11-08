@@ -63,17 +63,17 @@ function studentProfile(student, number) {
 
         var el = '#accordion #card'+number+' #heading'+number;
         $('<a/>',{
-            'class': "btn", 
+            'class': "btn",
             'data-toggle': "collapse",
             'data-target' : "#collapse"+number,
             'aria-expanded' : "true", 
             'aria-controls' : "collapse"+number,
-            html : '<i class="fas fa-bars"></i> ' +' ' +student.name+' '+student.surname+'<i class="fas fa-graduation-cap"></i>'
+            html : '<ul class="row"><li class="col-4"><i class="fas fa-bars"></i> ' +' ' +student.name+' '+student.surname+'</li><li class="col-5">' + student.faculty + '</li><li class="col-3"> <p class="profileView" title="Pregledaj profil"><i class="fas fa-user"></i> Pregledaj profil</p> </li></ul>'
         }).appendTo(el);
 
         $('<div/>',{
             'id' : "collapse"+number ,
-            'class' :"collapse container-fluid",
+            'class' :"collapse",
             'aria-labelledby': "heading"+number, 
             'data-parent': "#accordion"
         }).appendTo('#accordion #card'+number);
@@ -83,12 +83,13 @@ function studentProfile(student, number) {
         div.setAttribute('class', 'card-body row student');
         div.setAttribute('id', 'student_'+number);
         div.innerHTML = `<div class="col-3" style="text-align:center">
-                            <div id="profile-img" style="margin:auto">
-                                <image id="img" class="img-fluid" src="${student.img_link}"/>
+                            <div id="profile-img" style="background-image:url('${student.img_link}')" title="${student.name} ${student.surname}">
                                 
                             </div>
-                            
-                            <a id="linkedin-info" style="display:${linkedin}" target="_blank" href="${student.linkedin}">
+                            <h4 style="color:#F08E39">
+                                __
+                            </h4>
+                            <a id="linkedin-info" style="display:${linkedin}" target="_blank" href="${student.linkedin}" title="${student.name} ${student.surname}">
                                <i class="fab fa-linkedin fa-2x"></i>
                             </a>
                         </div>
@@ -118,6 +119,9 @@ function studentProfile(student, number) {
                             <h4 style="color:#F08E39; margin:20px 0">
                                 __
                             </h4>
+                            <div id="cvButton${number}">
+
+                            </div>
                         </div>`;
 
             var button = document.createElement('button');
@@ -127,9 +131,9 @@ function studentProfile(student, number) {
             if(cvDownloadButton(student)){
                 button.setAttribute('type', 'button');
                 button.setAttribute('class', 'btn dark-button button-large cv-button');
-                button.innerHTML=`<a download target="_blank" href="${student.cv.link}">Preuzmite CV</a>`;
+                button.innerHTML=`<a download target="_blank" href="${student.cv.link}" title="${student.name} ${student.surname}">Preuzmite CV</a>`;
                 
-                $(button).appendTo($('#student_'+number));
+                $(button).appendTo($('#cvButton'+number));
             }
 
         // all info about student should be appended to row
