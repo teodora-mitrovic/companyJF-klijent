@@ -8,6 +8,6 @@ $(document).ready(function(){
 function checkToken() {
 	if(sessionStorage.getItem('token')==null){
 		alert('Da biste videli ovu stranicu, molimo Vas da se ulogujete');
-		window.location.href="index.html";
+		window.location.href="../index.html";
 	}
 }
