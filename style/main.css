@@ -6,6 +6,8 @@ body, .row, ul, li {
   }
   body {
     background: gainsboro;
+    position: relative;
+    min-height: -webkit-fill-available;
   }
   body li {
     list-style: none;
@@ -243,17 +245,118 @@ body, .row, ul, li {
   }
 
   /* CONTACT */
-  #contact {
+  #home, #contact {
     margin-top: 50px;
   }
-  #contact .card-body {
+  #contact .card-body, #home .card-body {
     color: #fff;
   }
-  #contact .card-body a {
+  #contact .card-body a, #home .card-body a {
     color : #F08E39;
   }
-  #contact .card-body a:hover {
+  #contact .card-body a:hover, #home .card-body a:hover {
     color: #fff;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+
+  /* FOOTER */
+  #clear {
+    height: 170px;
+  }
+
+  footer {
+    background-color: #5a5a5a;
+    font-size: 90%;
+    margin-top: 50px;
+    padding: 30px 0 10px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 110px;
+  }
+
+  footer .menu li {
+    display: inline;
+    padding-right: 15px;
+  }
+
+  footer .menu li a {
+    color: #F08E39;
+    cursor: pointer;
+  }
+
+  footer .menu li a:hover {
+    color: #fff;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+
+  footer #social {
+    margin-top: -50px;
+    background-color: #F08E39;
+    border-radius: 10px 10px 0 0;
+    padding: 20px 30px;
+    height: 130px;
+    position: relative;
+  }
+
+  footer #social h4 {
+    color: #fff;
+    margin-bottom: 20px;
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+  }
+
+  footer #social ul {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+  }
+
+  footer #social li {
+    display: inline;
+  }
+
+  footer #social li i {
+    color: #fff;
+    padding: 0 5px;
+    font-size: 250%;
+    background-color: #F08E39;
+  }
+
+  footer #social li i:hover {
+    opacity: 0.6;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+  }
+
+  .clearFix {
+    height: 30px;
+  }
+
+  footer .menu .copyright {
+    padding-top: 30px;
+    color: #fff;
+    font-size: 90%;
+  }
+
+  footer .menu .copyright a {
+    color: #fff;
+    cursor: pointer;
+  }
+
+  footer .menu .copyright a:hover {
+    color: #F08E39;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
