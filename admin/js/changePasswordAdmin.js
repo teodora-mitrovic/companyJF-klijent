@@ -17,7 +17,7 @@ $(document).ready(function(){
 
 
 
-	$("#change_password_form").submit(function(e){
+	$("#change_password_admin_form").submit(function(e){
 
 		e.preventDefault();
         e.stopPropagation();
@@ -30,16 +30,15 @@ $(document).ready(function(){
         if(confirmPassword(password, confirmed_password)){
         	
         	var token=sessionStorage.getItem('token');
-			var email=$('#companies option:selected').attr('id');
-			console.log(email);
-
-
+			var email=sessionStorage.getItem('email');
+			
 
 			jsonData={};
-			jsonData['new_password']=password;
+			jsonData['old_password']=$('#old_password').val();
+			jsonData['new_password']=$('#new_password').val();
 
 
-			const URLlogin="https://cv.brain.rs/api/company/changePassword/"+email;
+			const URLlogin="https://cv.brain.rs/api/admin/changePassword/"+email;
 
 			$.ajax({
 				  headers: { 
@@ -57,9 +56,9 @@ $(document).ready(function(){
 				  success: function(resp){ 
 
 				  
-				  		var form=document.getElementById('change_password_form');
+				  		var form=document.getElementById('change_password_admin_form');
 					  	form.reset();
-					  	alert("Lozinka uspesno promenjena");
+					  	$('#info-pass-admin').text("Lozinka uspesno promenjena!");
 
 				  	
 				  },
@@ -76,7 +75,20 @@ $(document).ready(function(){
 
 				  	switch(XMLHttpRequest.status) {
 				  		case 500:
-				  			alert("Greška prilikom izmene lozinke!");
+				  			var form=document.getElementById('change_password_admin_form');
+						  	form.reset();
+					  		$('#info-pass-admin').text("Greška, molimo Vas pokušajte ponovo");
+					  		$('#info-pass-admin').css('color', 'red');
+
+
+				  			break;
+				  		case 404:
+				  			var form=document.getElementById('change_password_admin_form');
+					  		$('#info-pass-admin').text("Pogrešno uneta stara lozinka");
+					  		$('#info-pass-admin').css('color', 'red');
+
+
+						  	form.reset();
 				  			break;
 				  	}
 			
@@ -87,7 +99,11 @@ $(document).ready(function(){
         }
 
         else {
-        	alert("Ponovo potvrdite novu lozinku!");
+        	
+			$('#info-pass-admin').text("Ponovo potvrdite novu lozinku!");
+			$('#info-pass-admin').css('color', 'red');
+
+
         }
 
 	

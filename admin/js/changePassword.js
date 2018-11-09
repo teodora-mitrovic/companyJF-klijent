@@ -12,9 +12,21 @@ function confirmPassword(password, confirmed_password){
  
 
 
-
 $(document).ready(function(){
 
+
+	$('.select-company').on('click', '.pass-modal-btn', function(){
+
+		var email = $(this).attr('id');
+		var name = $(this).val();
+		console.log(name);
+
+		
+		$('#companyName').val(name);
+		$('#companyEmail').val(email);
+		$('#passwordModal').modal('show');
+
+	});
 
 
 	$("#change_password_form").submit(function(e){
@@ -30,7 +42,7 @@ $(document).ready(function(){
         if(confirmPassword(password, confirmed_password)){
         	
         	var token=sessionStorage.getItem('token');
-			var email=$('#companies option:selected').attr('id');
+			var email=$('#companyName').attr('id');
 			console.log(email);
 
 
@@ -55,11 +67,9 @@ $(document).ready(function(){
 				  data: JSON.stringify(eval(jsonData)),
 
 				  success: function(resp){ 
-
-				  
-				  		var form=document.getElementById('change_password_form');
-					  	form.reset();
-					  	alert("Lozinka uspesno promenjena");
+				  		$('#new_password').val("");
+				  		$('#confirmed_password').val("");
+					  	$('#info-company-pass').text("Lozinka uspesno promenjena");
 
 				  	
 				  },
@@ -76,7 +86,10 @@ $(document).ready(function(){
 
 				  	switch(XMLHttpRequest.status) {
 				  		case 500:
-				  			alert("Greška prilikom izmene lozinke!");
+					  		$('#info-company-pass').text("Greška prilikom promene lozinke");
+				  			$('#info-company-pass').css('color', 'red');
+				  			$('#new_password').val("");
+				  			$('#confirmed_password').val("");
 				  			break;
 				  	}
 			
@@ -87,7 +100,9 @@ $(document).ready(function(){
         }
 
         else {
-        	alert("Ponovo potvrdite novu lozinku!");
+        	
+        	$('#info-company-pass').text("Ponovo potvrdite novu lozinku!");
+			$('#info-company-pass').css('color', 'red');
         }
 
 	

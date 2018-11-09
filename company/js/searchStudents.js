@@ -145,6 +145,9 @@ $(function(){
     
     $('#search-btn').bind('click', function(){
 
+        $(this).prop('disabled', true);
+        $('#searching_text').css('display','inline');
+
 
         var token = sessionStorage.getItem('token');
         jsonData = {};
@@ -286,7 +289,10 @@ $(function(){
             success: function(resp) {
 
                 
-                console.log(resp.student);
+                //console.log(resp.student);
+
+                $('#searching_text').css('display','none');
+                $('#search-btn').css('display', 'none');
 
                 // call studentProfile(student) for every student
                 $('#accordion').empty();

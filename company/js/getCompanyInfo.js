@@ -1,30 +1,13 @@
-/* GET ALL COMPANIES */
+/* GET COMPANY INFO */
 
-function populateSelect(id, array) {
-	var option='';
-	for(var i=0; i<array.length; i++){
-		option+='<option value="'+ array[i].name + '" id="'+ array[i].email + '">' + array[i].name + '</option>';
-	}
-
-	$(id).append(option);
-}
+function companyInfo(){
 
 
-
-$(document).ready(function(){
-
-	//
-
-
-
-	$("#companies_button").click(function(e){
-
-		const URL="https://cv.brain.rs/api/company/getAll";
-
-
-		e.preventDefault();
-        e.stopPropagation();
         var token = sessionStorage.getItem('token');
+        var email = sessionStorage.getItem('email');
+
+		const URL="https://cv.brain.rs/api/company/getInfo/"+email;
+
 
 		$.ajax({
 			 
@@ -35,14 +18,14 @@ $(document).ready(function(){
 			  },
 			  success: function(resp){ 
 
-				  	// display all company names	
-				populateSelect('#companies', resp.companies);
+				  	// display all company names
+				console.log(resp);	
+				$('#company_name i').text(resp.company.company_name);
 
 			  },
 			  complete: function(xhr){
 			  	sessionStorage.removeItem('token');
 	  			sessionStorage.setItem('token', xhr.getResponseHeader('Authorization').split(' ')[1]);
-				$("#passwordModal").modal('show');	
 			  	
 			  },
 			  error: function(XMLHttpRequest, textStatus, errorThrown){
@@ -54,7 +37,6 @@ $(document).ready(function(){
 			  	switch(XMLHttpRequest.status) {
 
 			  		case 401:
-				  		form.reset();
 				  		$('#info-companies').text("Neautorizovani pristup");
 				  		$('#info-companies').show(0);
 				  		break;
@@ -73,8 +55,13 @@ $(document).ready(function(){
 
 
 
-	});
+	};
 
+
+
+$(document).ready(function(){
+
+	companyInfo();
 
 
 

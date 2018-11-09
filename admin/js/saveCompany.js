@@ -38,7 +38,8 @@ $(document).ready(function(){
 			  		var form=document.getElementById('register_form');
 			  		form.reset();
 					//close modal
-					alert("Uspešno sačuvana kompanija!");
+					
+					$('#info-register-company').text('Uspešno sačuvana kompanija!');
 			  	
 			  		
 			  },
@@ -53,13 +54,19 @@ $(document).ready(function(){
 			  
 			  	switch(XMLHttpRequest.status) {
 			  		case 500:
-			  			alert('Greška prilikom registrovanja kompanije!');
+						$('#info-register-company').text('Greška prilikom registrovanja kompanije!');
+						$('#info-register-company').css('color', 'red');
+
 			  			break;
 			  		case 401:
-			  			alert("Doslo je do greske prilikom autorizacije");
+			  			$('#info-register-company').text('Došlo je do greške prilikom autorizacije');
+						$('#info-register-company').css('color', 'red');
+
 			  			break;
 			  		case 403:
-			  			alert("Email je već zauzet, unesite drugi!");
+			  			$('#info-register-company').text('Email je već zauzet, unesite drugi!');
+						$('#info-register-company').css('color', 'red');
+
 
 			  	}
 			  	
